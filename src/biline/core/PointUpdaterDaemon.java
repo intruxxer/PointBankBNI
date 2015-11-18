@@ -51,7 +51,7 @@ public class PointUpdaterDaemon {
 		workingDir       = System.getProperty("user.dir");
 		monthlyFile		 = "/files/monthly.txt";
 		quarterlyFile	 = "/files/quarterly.txt";
-		grandprizeFile	 = "/files/quarterly.txt";
+		grandprizeFile	 = "/files/grandprize.txt";
 		recSeparator	 = '|'; 
 		escChar			 = '\''; 
 		headerLine		 = 1;
