@@ -49,9 +49,9 @@ public class PointUpdaterDaemon {
 		statQuarterly    = false;
 		statGrandprize   = false;
 		workingDir       = System.getProperty("user.dir");
-		monthlyFile		 = "/files/monthly.txt";
-		quarterlyFile	 = "/files/quarterly.txt";
-		grandprizeFile	 = "/files/grandprize.txt";
+		monthlyFile		 = PropertiesLoader.getProperty("POINT_MONTHLY_FILE");
+		quarterlyFile	 = PropertiesLoader.getProperty("POINT_QUARTERLY_FILE");
+		grandprizeFile	 = PropertiesLoader.getProperty("POINT_GRANDPRIZE_FILE");
 		recSeparator	 = '|'; 
 		escChar			 = '\''; 
 		headerLine		 = 1;
@@ -244,7 +244,7 @@ public class PointUpdaterDaemon {
 			//CREATE TABLES & TRUNCATE AL PREV. DATA
 			String createMonthlyPointTableQuery = 
 						"CREATE TABLE IF NOT EXISTS `tbl_points_monthly` (" +
-						" `point_id` int(11) NOT NULL," +
+						" `point_id` int(11) NOT NULL auto_increment," +
 						" `point_no` int(7) NOT NULL DEFAULT '0'," +
 						" `point_accnum` varchar(20) NOT NULL DEFAULT '0'," +
 						" `point_cardno` varchar(16) NOT NULL DEFAULT '0'," +

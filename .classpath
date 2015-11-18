@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="/Users/alpha/Developments/App/PointBankBNI/lib/slf4j-log4j12-1.5.11.jar"/>
 	<classpathentry kind="lib" path="/Users/alpha/Developments/App/PointBankBNI/lib/sqljdbc42.jar"/>
 	<classpathentry kind="lib" path="/Users/alpha/Developments/App/PointBankBNI/lib/opencsv-3.6.jar"/>
+	<classpathentry kind="lib" path="/Users/alpha/Developments/App/PointBankBNI/lib/date4j.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
