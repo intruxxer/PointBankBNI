@@ -43938,4 +43938,35 @@
  2015-11-18 08:59:58,782 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
  2015-11-18 09:01:05,539 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
  2015-11-18 09:01:05,540 INFO - PointUpdaterDaemon: [INSERT GRANDPRIZE] Finished: 18-11-2015 09:01:05.540
+ 2015-11-18 09:32:38,594 INFO - PointUpdaterDaemon: [MAIN PROCESS] Started: 18-11-2015 09:32:38.328
+ 2015-11-18 09:32:39,434 INFO - MysqlConnect: [CONSTRUCTOR] Connection to MySQL DB established.
+ 2015-11-18 09:32:39,435 INFO - PointUpdaterDaemon: [TABLE] Started: 18-11-2015 09:32:39.434
+ 2015-11-18 09:32:39,447 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:32:39,448 INFO - PointUpdaterDaemon: [TABLE] Finished: 18-11-2015 09:32:39.448
+ 2015-11-18 09:32:39,448 INFO - PointUpdaterDaemon: [INSERT MONTHLY] Started: 18-11-2015 09:32:39.448
+ 2015-11-18 09:32:39,456 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
+ 2015-11-18 09:34:54,339 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:34:54,340 INFO - PointUpdaterDaemon: [INSERT MONTHLY] Finished: 18-11-2015 09:34:54.339
+ 2015-11-18 09:34:54,340 INFO - PointUpdaterDaemon: [INSERT QUARTERLY] Started: 18-11-2015 09:34:54.340
+ 2015-11-18 09:34:54,345 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
+ 2015-11-18 09:36:01,426 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:36:01,426 INFO - PointUpdaterDaemon: [INSERT QUARTERLY] Finished: 18-11-2015 09:36:01.426
+ 2015-11-18 09:36:01,427 INFO - PointUpdaterDaemon: [INSERT GRANDPRIZE] Started: 18-11-2015 09:36:01.427
+ 2015-11-18 09:36:01,431 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
+ 2015-11-18 09:39:52,552 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:39:52,552 INFO - PointUpdaterDaemon: [INSERT GRANDPRIZE] Finished: 18-11-2015 09:39:52.552
+ 2015-11-18 09:43:29,920 INFO - PointUpdaterDaemon: [MAIN PROCESS] Started: 18-11-2015 09:43:29.620
+ 2015-11-18 09:43:30,578 INFO - MysqlConnect: [CONSTRUCTOR] Connection to MySQL DB established.
+ 2015-11-18 09:43:30,578 INFO - PointUpdaterDaemon: [TABLE] Started: 18-11-2015 09:43:30.578
+ 2015-11-18 09:43:31,654 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:43:31,654 INFO - PointUpdaterDaemon: [TABLE] Finished: 18-11-2015 09:43:31.654
+ 2015-11-18 09:43:31,654 INFO - PointUpdaterDaemon: [INSERT MONTHLY] Started: 18-11-2015 09:43:31.654
+ 2015-11-18 09:43:31,663 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
+ 2015-11-18 09:44:06,385 INFO - PointUpdaterDaemon: [MAIN PROCESS] Started: 18-11-2015 09:44:06.073
+ 2015-11-18 09:44:07,215 INFO - MysqlConnect: [CONSTRUCTOR] Connection to MySQL DB established.
+ 2015-11-18 09:44:07,216 INFO - PointUpdaterDaemon: [TABLE] Started: 18-11-2015 09:44:07.215
+ 2015-11-18 09:44:10,061 INFO - MysqlConnect: [CLOSE] Connection to MySQL DB terminated.
+ 2015-11-18 09:44:10,061 INFO - PointUpdaterDaemon: [TABLE] Finished: 18-11-2015 09:44:10.061
+ 2015-11-18 09:44:10,062 INFO - PointUpdaterDaemon: [INSERT MONTHLY] Started: 18-11-2015 09:44:10.062
+ 2015-11-18 09:44:10,071 INFO - MysqlConnect: [OPEN] Connection to MySQL DB established.
  

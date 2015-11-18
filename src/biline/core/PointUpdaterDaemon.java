@@ -251,10 +251,10 @@ public class PointUpdaterDaemon {
 						" `point_monthly` int(6) NOT NULL DEFAULT '0'," +
 						" `deleted` int(1) NOT NULL DEFAULT '0'," +
 						" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-						") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
-						+ "ALTER TABLE `tbl_points_monthly` ADD PRIMARY KEY (`point_id`);"
-						+ "ALTER TABLE `tbl_points_monthly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
+						") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 				
+			String addPKMonthlyPointTableQuery	  = "ALTER TABLE `tbl_points_monthly` ADD PRIMARY KEY (`point_id`);";
+			String addAIMonthlyPointTableQuery    = "ALTER TABLE `tbl_points_monthly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 			String truncateMonthlyPointTableQuery = "TRUNCATE TABLE  `tbl_points_monthly`;";
 			
 			String createQuarterlyPointTableQuery = 
@@ -266,10 +266,10 @@ public class PointUpdaterDaemon {
 					" `point_quarterly` int(6) NOT NULL DEFAULT '0'," +
 					" `deleted` int(1) NOT NULL DEFAULT '0'," +
 					" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-					") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
-					+ "ALTER TABLE `tbl_points_quarterly` ADD PRIMARY KEY (`point_id`);"
-					+ "ALTER TABLE `tbl_points_quarterly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
+					") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 			
+			String addPKQuarterlyPointTableQuery    = "ALTER TABLE `tbl_points_quarterly` ADD PRIMARY KEY (`point_id`);";
+			String addAIQuarterlyPointTableQuery    = "ALTER TABLE `tbl_points_quarterly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 			String truncateQuarterlyPointTableQuery = "TRUNCATE TABLE  `tbl_points_quarterly`;";
 		
 			String createGrandprizePointTableQuery = 
@@ -281,10 +281,10 @@ public class PointUpdaterDaemon {
 				" `point_grandprize` int(6) NOT NULL DEFAULT '0'," +
 				" `deleted` int(1) NOT NULL DEFAULT '0'," +
 				" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-				") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
-				+ "ALTER TABLE `tbl_points_grandprize` ADD PRIMARY KEY (`point_id`);"
-				+ "ALTER TABLE `tbl_points_grandprize` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
+				") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 		
+			String addPKGrandprizePointTableQuery    = "ALTER TABLE `tbl_points_grandprize` ADD PRIMARY KEY (`point_id`);";
+			String addAIGrandprizePointTableQuery    = "ALTER TABLE `tbl_points_grandprize` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 			String truncateGrandprizePointTableQuery = "TRUNCATE TABLE  `tbl_points_grandprize`;";
 				
 			try {
@@ -294,11 +294,20 @@ public class PointUpdaterDaemon {
 		  	    }
 			 	stm 		 = con.createStatement();
 			 	affectedRow  = stm.executeUpdate(createMonthlyPointTableQuery);
-			 	affectedRow  = stm.executeUpdate(createQuarterlyPointTableQuery);
-			 	affectedRow  = stm.executeUpdate(createGrandprizePointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addPKMonthlyPointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addAIMonthlyPointTableQuery);
 			 	affectedRow  = stm.executeUpdate(truncateMonthlyPointTableQuery);
+			 	
+			 	affectedRow  = stm.executeUpdate(createQuarterlyPointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addPKQuarterlyPointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addAIQuarterlyPointTableQuery);
 			 	affectedRow  = stm.executeUpdate(truncateQuarterlyPointTableQuery);
+			 	
+			 	affectedRow  = stm.executeUpdate(createGrandprizePointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addPKGrandprizePointTableQuery);
+			 	affectedRow  = stm.executeUpdate(addAIGrandprizePointTableQuery);
 			 	affectedRow  = stm.executeUpdate(truncateGrandprizePointTableQuery);
+			 	
 			} 
 		    catch (SQLException e) { e.printStackTrace(); } 
 		    finally
