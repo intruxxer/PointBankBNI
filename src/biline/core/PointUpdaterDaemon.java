@@ -197,7 +197,7 @@ public class PointUpdaterDaemon {
 			//CREATE TABLE & TRUNCATE AL PREV. DATA
 			String createPointTableQuery = 
 						"CREATE TABLE IF NOT EXISTS `tbl_points` (" +
-						" `point_id` int(11) NOT NULL," +
+						" `point_id` int(11) NOT NULL NOT NULL DEFAULT '0'," +
 						" `point_no` int(7) NOT NULL DEFAULT '0'," +
 						" `point_accnum` varchar(20) NOT NULL DEFAULT '0'," +
 						" `point_cardno` varchar(16) NOT NULL DEFAULT '0'," +
@@ -206,7 +206,9 @@ public class PointUpdaterDaemon {
 						" `point_grandprize` int(6) NOT NULL DEFAULT '0'," +
 						" `deleted` int(1) NOT NULL DEFAULT '0'," +
 						" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-						") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+						") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+						+ "ALTER TABLE `tbl_points` ADD PRIMARY KEY (`point_id`);"
+						+ "ALTER TABLE `tbl_points` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 				
 			String truncatePointTableQuery = "TRUNCATE TABLE  `tbl_points`;";
 				
@@ -249,7 +251,9 @@ public class PointUpdaterDaemon {
 						" `point_monthly` int(6) NOT NULL DEFAULT '0'," +
 						" `deleted` int(1) NOT NULL DEFAULT '0'," +
 						" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-						") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+						") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+						+ "ALTER TABLE `tbl_points_monthly` ADD PRIMARY KEY (`point_id`);"
+						+ "ALTER TABLE `tbl_points_monthly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 				
 			String truncateMonthlyPointTableQuery = "TRUNCATE TABLE  `tbl_points_monthly`;";
 			
@@ -262,7 +266,9 @@ public class PointUpdaterDaemon {
 					" `point_quarterly` int(6) NOT NULL DEFAULT '0'," +
 					" `deleted` int(1) NOT NULL DEFAULT '0'," +
 					" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-					") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+					") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+					+ "ALTER TABLE `tbl_points_quarterly` ADD PRIMARY KEY (`point_id`);"
+					+ "ALTER TABLE `tbl_points_quarterly` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 			
 			String truncateQuarterlyPointTableQuery = "TRUNCATE TABLE  `tbl_points_quarterly`;";
 		
@@ -275,7 +281,9 @@ public class PointUpdaterDaemon {
 				" `point_grandprize` int(6) NOT NULL DEFAULT '0'," +
 				" `deleted` int(1) NOT NULL DEFAULT '0'," +
 				" `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP" +
-				") ENGINE=InnoDB DEFAULT CHARSET=latin1;";
+				") ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+				+ "ALTER TABLE `tbl_points_grandprize` ADD PRIMARY KEY (`point_id`);"
+				+ "ALTER TABLE `tbl_points_grandprize` MODIFY `point_id` int(11) NOT NULL AUTO_INCREMENT;";
 		
 			String truncateGrandprizePointTableQuery = "TRUNCATE TABLE  `tbl_points_grandprize`;";
 				
